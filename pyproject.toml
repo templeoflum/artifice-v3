@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artifice"
+version = "3.0.0"
+description = "Real-time GPU glitch art synthesizer based on GLIC principles"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PySide6>=6.5.0",
+    "moderngl>=5.8.0",
+    "numpy>=1.24.0",
+    "Pillow>=10.0.0",
+]
+
+[project.scripts]
+artifice = "artifice:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
